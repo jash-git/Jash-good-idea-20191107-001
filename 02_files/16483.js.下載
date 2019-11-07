@@ -1,0 +1,11 @@
+(function (w, s, c) {
+    'use strict';
+    s = w.Scupioads = w.Scupioads || [];
+    c = s.config = s.config || {};
+    c[16483] = {
+        slotType: 'PRA',
+        rp: 0.6628003314001657000828500414,
+        origin: 'businesstoday.com.tw', 
+        '300x250': { bids: [ { bidder: 'bridgewell', params: { ChannelID: 'CgUxNjQ4MxIBNBoENDgyOSIOYnVzaW5lc3N0b2RheTIqCwisAhD6ARoBOSABMAA', cpmWeight: 1 } },{ bidder: 'criteo', params: { zoneId: 955864 } },{ bidder: 'rubicon', params: { accountId: 17388, siteId: 224750, zoneId: 1104198 } },{ bidder: 'rtbhouse', params: { publisherId: '873yT9t9EaZlQstTgcj6', region: 'prebid-asia' }  },{ bidder: 'ucfunnel', params: { adid: 'ad-34BB7AB9B7879BEE1867A28E238626B' } },{ bidder: 'clickforce', params: { zone: '9035' } },{ bidder: 'appier', params: { hzid: 'WUWFHIOp' } } ] }
+    };
+}(window));

@@ -1,0 +1,1116 @@
+/* 文章列表(2018優化版) */
+.article__pagetitle {
+    position: relative;
+    width: 100%;
+    height: 530px;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 50px;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.article__pagetitle::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: calc(100% - 150px);
+    background: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,.6) 100%);
+}
+.article__pagetitle .container {
+    position: relative;
+}
+.article__pagetitle-title {
+    max-height: 2.6em;
+    color: rgba(255,255,255,.9);
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: 2px;
+    text-shadow: 0 0 3px rgba(0,0,0,.4);
+    text-transform: uppercase;
+    word-break: break-all;
+    margin-bottom: 10px;
+    overflow: hidden
+}
+.article__pagetitle-text {
+    max-height: 3.4em;
+    color: #fff;
+    font-family: 微軟正黑體修正, 微軟正黑體, "Microsoft JhengHei", "LiHei Pro", "WenQuanYi Zen Hei", Arial;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    text-shadow: 0 0 3px rgba(0,0,0,.4);
+    word-break: break-all;
+    overflow: hidden
+}
+.article__pagetitle-btnbox {
+    display: flex;
+    flex-wrap: wrap;
+}
+.article__pagetitle-btn {
+    height: 50px;
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    line-height: 48px;
+    padding: 0 30px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+}
+.article__pagetitle-btn:hover {
+    color: #fff;
+    background-color: #e52020;
+    border-color: #e52020;
+}
+.article__section {
+    padding: 50px 0;
+}
+.article__mainevent {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+.article__mainevent > * {
+    margin-bottom: 50px;
+}
+.article__titlebox {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    margin-bottom: 45px;
+    border-bottom: 1px solid #ddd;
+}
+.article__titlebox h2 {
+    font-family: 微軟正黑體修正, 微軟正黑體, "Microsoft JhengHei", "LiHei Pro", "WenQuanYi Zen Hei", Arial;
+    color: #333;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1;
+}
+.article__router {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.article__router-item {
+    margin: 0;
+    font-family: 微軟正黑體修正, 微軟正黑體, "Microsoft JhengHei", "LiHei Pro", "WenQuanYi Zen Hei", Arial;
+    color: #777;
+    font-size: 14px;
+    line-height: 1;
+}
+.article__router-item a {
+    font-family: inherit;
+    color: #777;
+}
+.article__router-item a:hover {
+    color: #e52020;
+}
+.article__router-item:nth-child(n + 2)::before {
+    content: '/';
+    margin: 0 3px;
+}
+.article__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-align-content: flex-start;
+            align-content: flex-start;
+    -webkit-align-items: stretch;
+            align-items: stretch;
+}
+.article__main {
+    position: relative;
+    width: calc(100% - 300px);
+    padding-right: 30px;
+}
+.article__main::before {
+    content: "";
+
+    display: block;
+
+    position: absolute;
+    right: 30px;
+    top: 0;
+
+    width: 1px;
+    height: 100%;
+
+    background-color: #ddd;
+}
+.article__focus {
+    width: calc(100% - 30px);
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+.article__focus--mobile {
+    display: block;
+    height: auto;
+    visibility: visible;
+    overflow: auto;
+}
+.article__bottomevent {
+    display: flex;
+    justify-content: center;
+}
+.article__bottomevent > * {
+    /*margin-top: 40px;*/
+}
+.article__bottomevent [id*="google_ads_iframe_"]{
+    margin-top: 40px;
+}
+@media (min-width: 992px) {
+    .article__focus--mobile {
+        height: 0;
+        visibility: hidden;
+        overflow: hidden;
+    }
+}
+@media (max-width: 991px) {
+    .article__focus--pc {
+        display: none;
+    }
+}
+.article__focus-item {
+    position: relative;
+    display: block;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.article__focus-item::before {
+    content: '';
+    display: block;
+    padding-top: 75%;
+}
+.article__focus-titlebox {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-transition: padding .4s ease;
+    -moz-transition: padding .4s ease;
+    transition: padding .4s ease;
+}
+.article__focus-item:hover .article__focus-titlebox {
+    padding: 20px 10px;
+}
+.article__focus-title {
+    max-height: 2.6em;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.3;
+    overflow: hidden;
+}
+.article__list-titlebox {
+    width: calc(100% - 30px);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+.article__list-titlebox h3 {
+    color: #333;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1;
+}
+.article__filter a {
+    color: #ccc;
+}
+.article__filter a:hover,
+.article__filter a.active {
+    color: #e52020;
+}
+.article__filter a:nth-child(n + 2) {
+    margin-left: 25px;
+}
+.article__item {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-align-content: flex-start;
+            align-content: flex-start;
+    -webkit-align-items: flex-start;
+            align-items: flex-start;
+    -webkit-justify-content: flex-start;
+            justify-content: flex-start;
+    padding: 30px 30px 30px 0;
+    -webkit-transition: background-color .4s ease;
+    -moz-transition: background-color .4s ease;
+    transition: background-color .4s ease;
+}
+.article__item:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+.article__item-img {
+    width: 280px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.article__item-img::before {
+    content: '';
+    display: block;
+    padding-top: 75%;
+}
+.article__item-content {
+    position: relative;
+    width: calc(100% - 280px);
+    height: 210px;
+    padding-left: 12px;
+}
+.article__item-date {
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    font-family: 微軟正黑體修正, 微軟正黑體, "Microsoft JhengHei", "LiHei Pro", "WenQuanYi Zen Hei", Arial;
+    color: #555;
+    font-size: 14px;
+    line-height: 1;
+    margin: 0;
+}
+.article__item-date::before {
+    content: '日期 | ';
+    color: #999;
+}
+.article__item-title {
+    max-height: 2.8em;
+    font-family: 微軟正黑體修正, 微軟正黑體, "Microsoft JhengHei", "LiHei Pro", "WenQuanYi Zen Hei", Arial;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.4;
+    overflow: hidden;
+    margin-top: 5px;
+}
+.article__item-text {
+    max-height: 3.4em;
+    font-family: 微軟正黑體修正, 微軟正黑體, "Microsoft JhengHei", "LiHei Pro", "WenQuanYi Zen Hei", Arial;
+    color: #555;
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 10px 0 0;
+    overflow: hidden;
+}
+.article__item-detail {
+    position: absolute;
+    width: 48px;
+    height: 16px;
+    right: 0px;
+    bottom: 0;
+    font-family: 微軟正黑體修正, 微軟正黑體, "Microsoft JhengHei", "LiHei Pro", "WenQuanYi Zen Hei", Arial;
+    color: #999;
+    font-size: 16px;
+    line-height: 1;
+    margin: 0;
+    overflow: hidden;
+    white-space:nowrap;
+
+    -webkit-transition: width 0.4s, color .4s;
+       -moz-transition: width 0.4s, color .4s;
+        -ms-transition: width 0.4s, color .4s;
+         -o-transition: width 0.4s, color .4s;
+            transition: width 0.4s, color .4s;
+}
+.article__item-detail .fa {
+    display: inline-block;
+    margin-left: 10px;
+}
+.article__item:hover .article__item-detail {
+    color: #e52020;
+    width: 67px;
+}
+.article__blockbox {
+    width: calc(100% - 30px);
+}
+.article__blocks {
+    margin: 0 -15px;
+}
+.article__block {
+    display: block;
+    width: 33.3333%;
+    padding: 30px 15px 0;
+}
+.article__block-box {
+    display: block;
+}
+.article__block-img {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.article__block-img::before {
+    content: '';
+    display: block;
+    padding-top: 75%;
+}
+.article__block-img .tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+.article__block-content {
+    text-align: center;
+    padding: 15px;
+    border-style: solid;
+    border-color: #f4f4f4;
+    border-width: 0 1px 1px;
+}
+.article__block-date {
+    font-family: 微軟正黑體修正, 微軟正黑體, "Microsoft JhengHei", "LiHei Pro", "WenQuanYi Zen Hei", Arial;
+    color: #555;
+    font-size: 14px;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+.article__block-title {
+    max-height: 4.2em;
+    font-family: 微軟正黑體修正, 微軟正黑體, "Microsoft JhengHei", "LiHei Pro", "WenQuanYi Zen Hei", Arial;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.4;
+    overflow: hidden;
+}
+.article__block-content hr {
+    margin: 10px 0;
+    border-color: #ddd;
+}
+.article__block-text {
+    font-family: 微軟正黑體修正, 微軟正黑體, "Microsoft JhengHei", "LiHei Pro", "WenQuanYi Zen Hei", Arial;
+    color: #555;
+    font-size: 15px;
+    line-height: 1.7;
+    text-align: left;
+}
+.article__block-detail {
+    display: inline-block;
+    width: 48px;
+    height: 16px;
+    font-family: 微軟正黑體修正, 微軟正黑體, "Microsoft JhengHei", "LiHei Pro", "WenQuanYi Zen Hei", Arial;
+    color: #999;
+    font-size: 16px;
+    line-height: 1;
+    margin: 0;
+    overflow: hidden;
+    white-space:nowrap;
+
+    -webkit-transition: width 0.4s, color .4s;
+       -moz-transition: width 0.4s, color .4s;
+        -ms-transition: width 0.4s, color .4s;
+         -o-transition: width 0.4s, color .4s;
+            transition: width 0.4s, color .4s;
+}
+.article__block-detail .fa {
+    display: inline-block;
+    margin-left: 10px;
+}
+.article__block:hover .article__block-detail {
+    color: #e52020;
+    width: 67px;
+}
+.article__aside {
+    position: relative;
+    width: 300px;
+}
+.article__aside-wrap > .article__aside-block:not(.article__aside-event) {
+    margin-bottom: 30px;
+}
+.article__aside-wrap > div:last-child {
+    margin-bottom: 0;
+}
+@media (min-width:992px) {
+    .article__fixed-box {
+        width: 300px;
+    }
+    .article__fixed-box--fixed {
+        position: fixed;
+    }
+}
+.article__fixed-box > div:not(.article__aside-event) {
+    margin-bottom: 30px;
+}
+.article__aside-event {
+    display: flex;
+    justify-content: center;
+}
+.article__aside-event > * {
+    margin-bottom: 30px;
+}
+.article__other + .article__aside-event > * {
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+.article__fixed-wrap {
+    margin-bottom: 30px;
+}
+.article__fixed-box > div:last-child,
+.article__fixed-box > .article__aside-event:last-child > * {
+    margin-bottom: 0;
+}
+.popular {
+    border: 1px solid #ddd;
+}
+.popular__titlebox {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background-color: #e52020;
+}
+.popular__titlebox::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 25px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 3.5px 0 3.5px;
+    border-color: #e52020 transparent transparent transparent;
+}
+.popular__title {
+    font-family: 微軟正黑體修正, 微軟正黑體, "Microsoft JhengHei", "LiHei Pro", "WenQuanYi Zen Hei", Arial;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+}
+.popular__subtitle {
+    font-family: 'Lato';
+    color: #fff;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1;
+    opacity: .8;
+}
+.popular__content {
+    padding: 15px;
+    background-color: #fff;
+}
+.popular__link {
+    display: block;
+    font-family: 微軟正黑體修正, 微軟正黑體, "Microsoft JhengHei", "LiHei Pro", "WenQuanYi Zen Hei", Arial;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.4;
+}
+.popular__link:hover {
+    color: #e52020;
+    text-decoration: underline!important;
+}
+.popular__link:nth-child(n + 2) {
+    margin-top: 12px;
+}
+.recommend__titlebox {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ddd;
+}
+.recommend__title {
+    font-family: 微軟正黑體修正, 微軟正黑體, "Microsoft JhengHei", "LiHei Pro", "WenQuanYi Zen Hei", Arial;
+    color: #333;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+    padding-left: 10px;
+    border-left: 5px solid #e52020;
+}
+.recommend__subtitle {
+    font-family: 'Lato';
+    color: #999;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1;
+}
+.recommend__item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+.recommend__item-num {
+    width: 32px;
+    font-family: 'Lato';
+    color: #777;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 1;
+    text-align: center;
+}
+.recommend__item-box {
+    width: calc(100% - 32px);
+}
+.recommend__item-title {
+    height: 1em;
+    font-family: 微軟正黑體修正, 微軟正黑體, "Microsoft JhengHei", "LiHei Pro", "WenQuanYi Zen Hei", Arial;
+    color: #555;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1;
+    overflow : hidden;
+    text-overflow : ellipsis;
+    white-space : nowrap;
+}
+.recommend__item-date {
+    font-family: 微軟正黑體修正, 微軟正黑體, "Microsoft JhengHei", "LiHei Pro", "WenQuanYi Zen Hei", Arial;
+    color: #999;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1;
+    margin-top: 10px;
+}
+.recommend__item-date .fa {
+    margin-right: 6px;
+}
+@media (max-width: 1199px) {
+    .article__block {
+        width: 50%;
+    }
+}
+@media (min-width:992px) {
+    .article__focus-item {
+        width: calc(50% - 15px);
+        margin: 30px 30px 0 0;
+    }
+    .article__focus-item:nth-child(-n + 2) {
+        margin-top: 0;
+    }
+    .article__focus-item:nth-child(2n) {
+        margin-right: 0;
+    }
+}
+@media (max-width:991px) {
+
+    .article__titlebox {
+        margin-bottom: 30px;
+    }
+    .article__main::before {
+        content: none;
+    }
+
+    .article__block {
+        padding-top: 20px;
+    }
+
+    .article__section {
+        padding: 40px 0;
+    }
+    .article__main {
+        width: 100%;
+        padding: 0 0 30px;
+    }
+    .article__focus-item {
+        margin: 0 !important;
+    }
+    .article__aside {
+        width: 100%;
+    }
+    .article__focus {
+        width: 100%;
+    }
+    .article__list-titlebox {
+        width: 100%;
+    }
+    .article__blockbox {
+        width: 100%;
+    }
+
+    .article__item {
+        padding: 20px 15px 20px 0;
+    }
+    .article__item-img {
+        width: 200px;
+    }
+    .article__item-content {
+        width: calc(100% - 200px);
+        height: auto;
+    }
+    .article__item-detail {
+        position: relative;
+        margin-top: 15px;
+    }
+
+   /* .article__aside {
+        display: none;
+    }*/
+}
+
+@media (max-width:767px) {
+    .article__pagetitle {
+        height: auto;
+        text-align: center;
+        padding-bottom: 0;
+    }
+    .article__pagetitle::after {
+        content: "";
+
+        display: block;
+
+        width: 100%;
+        padding-top: 75%;
+    }
+    .article__pagetitle .container {
+        position: absolute;
+        bottom: 25px;
+        left: 0%;
+
+        width: 100% !important;
+    }
+    .article__pagetitle-btnbox {
+        justify-content: center;
+    }
+    .article__block {
+        width: 100%;
+    }
+
+    .article__router {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .article__item-title {
+        font-size: 20px;
+    }
+    .article__item-text {
+        font-size: 14px;
+    }
+    .article__item-detail, .article__block-text {
+        font-size: 14px;
+    }
+    .article__item-date, .article__block-date {
+        font-size: 13px;
+    }
+}
+@media (max-width: 575px) {
+    .article__block {
+        padding-top: 15px;
+    }
+
+    .article__item {
+        padding: 15px 10px 15px 0;
+    }
+    .article__item-img {
+        width: 120px;
+    }
+    .article__item-content {
+        width: calc(100% - 120px);
+    }
+    .article__item-date {
+        position: relative;
+        margin-bottom: 10px;
+    }
+    .leaderboard-blocks-tag {
+        position: absolute;
+        top: 0;
+        left: -120px;
+
+        margin: 0;
+    }
+    .article__item-title {
+        font-size: 18px;
+    }
+    .article__item-text {
+        margin-top: 0px;
+        max-height: 1.7em;
+    }
+    .article__block-text {
+        margin-bottom: 0;
+    }
+    .article__item-detail, .article__block-detail {
+        display: none;
+    }
+}
+
+/* 文章內頁(2018優化版) */
+.article__maintitle {
+    max-width: 840px;
+    color: #333;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: center;
+    margin: 0 auto 42px;
+}
+.article__mainbanner {
+    width: 100%;
+    margin-bottom: 20px; /*50px;*/
+}
+.article__mainbanner img {
+    width: 100%;
+    max-width: none;
+}
+.context {
+    padding-right: 30px;
+}
+.context__titlebox {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+.context__info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.context__info:first-child {
+    max-width: calc(100% - 140px);
+}
+.context__info-item {
+    font-family: 微軟正黑體修正, 微軟正黑體, "Microsoft JhengHei", "LiHei Pro", "WenQuanYi Zen Hei", Arial;
+    color: #555;
+    font-size: 16px;
+    line-height: 1;
+    margin: 0 15px 5px 0;
+}
+.context__info-item::before {
+    color: #999;
+    margin-right: 5px;
+}
+.context__info-item--author::before {
+    content: '撰文 |';
+}
+.context__info-item--type::before {
+    content: '分類 |';
+}
+.context__info-item--source::before {
+    content: '圖檔來源 |';
+}
+.context__info-item--date::before {
+    content: '日期 |';
+}
+.context__info-item--periods::before {
+    content: '文章期數 |';
+}
+.context__info-item--period::before {
+    content: '期別 |';
+}
+.context__info-item--from::before {
+    content: '文章出處 |';
+}
+.context__info-item:last-child {
+    margin-right: 0;
+}
+.context__info-item a{
+    font-family: 微軟正黑體修正, 微軟正黑體, "Microsoft JhengHei", "LiHei Pro", "WenQuanYi Zen Hei", Arial;
+    color: #555;
+    font-size: 16px;
+    line-height: 1;
+}
+.context__info-item a:hover{
+    color: #e52020;
+    text-decoration: underline!important;
+}
+.context__option {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.font__select {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+}
+.font__select-btn {
+    display: block;
+    width: 50px;
+    color: #777;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+}
+.font__select-btn:hover {
+    color: #555;
+}
+.font__select-btn:nth-child(2) {
+    border-left: 1px solid #ddd;
+}
+.other__option {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.collection {
+    display: flex;
+    align-items: center;
+    font-family: 微軟正黑體修正, 微軟正黑體, "Microsoft JhengHei", "LiHei Pro", "WenQuanYi Zen Hei", Arial;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 30px;
+    padding: 0 13px;
+    background-color: #c0c0c0;
+    border-radius: 15px;
+}
+.collection.collected {
+    background-color: #f7a81c;
+    cursor: default;
+}
+.collection .fa {
+    margin-right: 5px;
+}
+.share {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 15px;
+}
+.share__btn {
+    display: block;
+    width: 30px;
+}
+.share__btn:hover {
+    opacity: .8;
+}
+.share__btn:nth-child(n + 2) {
+    margin-left: 10px;
+}
+.article__introduction {
+    padding: 25px 15px;
+    margin-bottom: 20px;
+    border-left: 7px solid #333;
+    background-color: #eee;
+}
+.context__tagbox {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 15px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-top: 1px dashed #aaa;
+}
+.context__tagbox .fa {
+    color: #999;
+    font-size: 15px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.context__tag {
+    display: block;
+    font-family: 微軟正黑體修正, 微軟正黑體, "Microsoft JhengHei", "LiHei Pro", "WenQuanYi Zen Hei", Arial;
+    color: #777;
+    font-size: 14px;
+    line-height: 25px;
+    padding: 0 10px;
+    margin-right: 5px;
+    margin-top: 5px;
+    background-color: #e8e8e8;
+    border-radius: 1px;
+}
+.context__tag:hover {
+    color: #fff;
+    background-color: #e52020;
+}
+.context__tag:last-child {
+    margin-right: 0px;
+}
+.context__event {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+.context__event > * {
+    /*margin: 30px 0;*/
+}
+.context__event [id*="google_ads_iframe_"] {
+    margin: 30px 0;
+}
+/*.context__event img {
+    max-width: 720px;
+}*/
+.article__other {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.article__other-block {
+    width: calc(50% - 15px);
+}
+.article__other-titlebox {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e52020;
+}
+.article__other-title {
+    color: #333;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+}
+.article__other-more {
+    color: #e52020;
+}
+.article__other-item {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+            justify-content: flex-start;
+    -webkit-align-items: flex-start;
+            align-items: flex-start;
+    -webkit-justify-content: flex-start;
+            justify-content: flex-start;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+.article__other-img {
+    width: 80px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.article__other-img::before {
+    content: '';
+    display: block;
+    padding-top: 75%;
+}
+.article__other-content {
+    width: calc(100% - 80px);
+    padding-left: 10px;
+}
+.article__other-content h5 {
+    height: 2.7em;
+    font-family: 微軟正黑體修正, 微軟正黑體, "Microsoft JhengHei", "LiHei Pro", "WenQuanYi Zen Hei", Arial;
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.35;
+    overflow: hidden;
+}
+.article__other-date {
+    font-family: 微軟正黑體修正, 微軟正黑體, "Microsoft JhengHei", "LiHei Pro", "WenQuanYi Zen Hei", Arial;
+    color: #999;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    margin: 5px 0 0;
+}
+.article__other-date .fa {
+    margin-right: 5px;
+}
+/* 編輯器 */
+.cke_editable {
+    font-family: 微軟正黑體修正, 微軟正黑體, "Microsoft JhengHei", "LiHei Pro", "WenQuanYi Zen Hei", Arial;
+    color: #555;
+    font-size: 1.1428em;
+    font-weight: 400;
+    line-height: 1.7;
+    margin: 0;
+    word-break: break-word;
+}
+.article__coverdescpt, .cke_editable p {
+    font-family: 微軟正黑體修正, 微軟正黑體, "Microsoft JhengHei", "LiHei Pro", "WenQuanYi Zen Hei", Arial;
+    color: #555;
+    font-size: 1.1428em;
+    font-weight: 400;
+    line-height: 1.7;
+    margin: 0;
+    word-break: break-word;
+}
+.cke_editable img {
+    height: auto !important;
+}
+
+@media (max-width:991px) {
+    .context {
+        padding: 0;
+    }
+    .article__maintitle {
+        font-size: 30px;
+        margin: 0 auto 20px;
+    }
+    .article__mainbanner {
+        margin-bottom: 30px;
+    }
+    .article__mainevent > * {
+        margin-bottom: 30px;
+    }
+}
+@media (max-width:767px) {
+    .article__other-block {
+        width: 100%;
+    }
+    .article__other-block:nth-child(n + 2) {
+        margin-top: 20px;
+    }
+}
+@media (max-width:575px) {
+    .font__select-btn {
+        width: 36px;
+    }
+    .share {
+        margin-left: 10px;
+    }
+    .share__btn:nth-child(n + 2) {
+        margin-left: 5px;
+    }
+
+    .context__info {
+        width: 100%;
+    }
+    .context__info:nth-child(n + 2) {
+        margin-top: 10px;
+    }
+    .context__info-item {
+        width: 100%;
+        font-size: 14px;
+        margin: 0;
+    }
+    .context__info-item:nth-child(n + 2) {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .article__maintitle {
+        font-size: 24px;
+        margin: 0 auto 15px;
+    }
+    .article__mainbanner {
+        margin-bottom: 10px; /*20px;*/
+    }
+    .article__mainevent > * {
+        margin-bottom: 20px;
+    }
+}
+/* 1214 */
+.article__list-event {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+/* 1214 end */

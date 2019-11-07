@@ -1,0 +1,213 @@
+.coin__mainwrap {
+    max-width: 720px;
+    margin: 0 auto;
+}
+.coin__maintitle {
+    font-family: '微軟正黑體';
+    color: #e52020;
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.coin__infoblock {
+    padding: 15px;
+    border-top: 1px solid #9fa0a0;
+    border-bottom: 1px solid #9fa0a0;
+}
+.coin__infoblock-text {
+    font-family: '微軟正黑體';
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2.25;
+    text-align: center;
+    margin: 0;
+}
+.coin__infoblock-text span {
+    color: #e52020;
+}
+.coin__purview {
+    font-family: '微軟正黑體';
+    color: #000;
+    font-size: 20px;
+    line-height: 1.8;
+    text-align: center;
+    margin: 30px 0 0;
+}
+.cointable__box {
+    padding: 15px 20px;
+    margin-top: 35px;
+    background-color: #f5f5f5;
+}
+.cointable__theader {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 0 16px 10px;
+}
+.cointable__th {
+    font-family: '微軟正黑體';
+    flex: 1;
+    color: #777;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+}
+.cointable__tbody {
+    padding: 8px 16px;
+    background-color: #fff;
+}
+.cointable__tbody-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-top: 1px solid #dcdddd;
+}
+.cointable__tbody-row:first-child {
+    border-top: 0;
+}
+.cointable__td {
+    font-family: '微軟正黑體';
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    color: #000;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1;
+    padding: 0px 10px;
+    border-left: 1px solid #dcdddd;
+}
+.cointable__td:first-child {
+    border: 0;
+}
+.cointable__btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100px;
+    height: 35px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 35px;
+    background-color: #eaa700;
+    border-radius: 3px;
+    -webkit-transition: opacity .4s ease;
+    -moz-transition: opacity .4s ease;
+    transition: opacity .4s ease;
+}
+.cointable__btn:hover {
+    color: #fff;
+    opacity: .7;
+}
+.member__coinbtnbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+}
+.member__coinbtn {
+    width: 120px;
+    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-family: '微軟正黑體';
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
+    background-color: #eaa700;
+    border-radius: 3px;
+    -webkit-transition: opacity .4s ease;
+    -moz-transition: opacity .4s ease;
+    transition: opacity .4s ease;
+}
+.member__coinbtn::before {
+    content: '';
+    display: block;
+    width: 22px;
+    height: 22px;
+    background-image: url(/lazyweb/web/images/coin/coin_icon.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 7px;
+}
+.member__coinbtn:hover {
+    color: #fff;
+    opacity: .7;
+}
+.member__coinbtnbox-text {
+    font-family: '微軟正黑體';
+    color: #555;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1;
+    margin: 10px 0 0!important;
+}
+.member__coinbtnbox-text span {
+    color: #eaa700;
+}
+@media (max-width:991px) {
+    .member__coinbtnbox {
+        align-items: center;
+        margin: 0 0 0 10px;
+    }
+    .member__coinbtnbox-text {
+        margin: 0 0 0 10px!important;
+    }
+}
+@media (max-width:767px) {
+    .member-status {
+        justify-content: flex-start;
+    }
+    .member__info {
+        flex: inherit;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+@media (max-width:575px) {
+    .coin__maintitle {
+        font-size: 28px;
+    }
+    .coin__infoblock-text {
+        font-size: 14px;
+    }
+    .coin__purview {
+        font-size: 16px;
+        margin: 20px 0 0;
+    }
+    .cointable__box {
+        margin-top: 25px;
+        padding: 15px 5px 5px;
+    }
+    .cointable__theader {
+        padding: 0 5px 5px;
+    }
+    .cointable__th {
+        font-size: 15px;
+    }
+    .cointable__tbody {
+        padding: 10px 5px;
+    }
+    .cointable__btn {
+        width: 50px;
+    }
+    .member-upgrade {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    .member__coinbtnbox {
+        margin: 10px 0 0!important;
+    }
+}
